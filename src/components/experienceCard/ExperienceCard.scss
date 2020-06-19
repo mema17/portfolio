@@ -2,7 +2,6 @@
 $azure: #03CCF7;
 $blue: #1670f7;
 $pink: #F60C86;
-$yellow: #FFCC00;
 $dark-gray : #3B3838;
 $white : #fff;
 $black : #000;
@@ -46,30 +45,6 @@ $secondary-color: $pink;
         color: $pink;
         font-weight: 700;
         font-size: 1.4rem;
-    }
-
-    &_desc_hashtags {
-        color: $white;
-        font-size: 1.2rem;
-        font-weight: 500;
-        margin: 1rem 0;
-
-        .hashtag--language,
-        .hashtag--task {
-            display: inline-block;
-            border-radius: 0.3rem;
-            padding: 0.3rem 1rem;
-            margin-right: 0.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .hashtag--language {
-            background-color: $azure;
-        }
-
-        .hashtag--task {
-            background-color: $pink;
-        }
     }
 
     &_job {

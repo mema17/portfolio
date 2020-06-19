@@ -1,10 +1,10 @@
 import React from 'react';
 
 import TopBar from './components/header/Header'
-import Intro from './components/Intro/Intro'
+import Intro from './components/Intro'
 import Contact from './components/contact/Contact'
-import FooterBar from './components/footer/Footer'
-import AboutMe from './components/AboutMe/AboutMe'
+import FooterBar from './components/Footer'
+import AboutMe from './components/AboutMe'
 
 import { Grommet, Main } from 'grommet';
 import THEME from './styles/theme';

@@ -5,23 +5,20 @@ import { Close } from 'grommet-icons'
 
 import './ExperienceCard.scss'
 import './experienceModal.scss'
+import {Hashtag, ButtonLinkModal} from './../../styles/lib'
 
 const listJobs = (jobs) => {
     return (jobs.map((job, index) => {
         return (
-            <Text 
-            color="white"
-            key={index}
-            className="hashtag--task">{job}</Text>
+            <Hashtag key={index}>{job}</Hashtag>
         )
     }))
 }
 const listLanguages = (languages) => {
     return (languages.map((language, index) => {
         return (
-            <Text color="white"
-            key={index}
-            className="hashtag--language">{language}</Text>
+            <Hashtag task key={index}>{language}</Hashtag>
+
         )
     }))
 }
@@ -62,15 +59,13 @@ export default function ExperienceCard({ data }) {
                </div>
                         <Image className="card__desc_img" src={process.env.PUBLIC_URL + "/assets/images/" +  data.fullImgPath} alt=""></Image>
                     <p className="card__desc--text">{data.fullDesc}</p>
-                    <Button
-                        secondary
+                    <ButtonLinkModal
                         href={data.link.address}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-pink"
                     >
                         {data.link.name}
-                    </Button>
+                    </ButtonLinkModal>
                 </Layer>
             )}
         </div>
