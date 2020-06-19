@@ -24,11 +24,12 @@ $laptop-xl: 2560px;
     src: url(./fonts/LibreBaskerville-Regular.ttf) format('truetype');
 }
 
-/* typography */
+
 html {
     font-family: "roboto-regular";
     font-size: 62.5%;
 }
+
 body{
     margin: 0;
 }
@@ -48,14 +49,7 @@ span {
 }
 
 /* responsive */
-
-
 @media screen and (min-width : $tablet) {
-
-    .about-me {
-        columns: 30rem 4;
-    }
-
     .project-details-modal {
         width: 65%;
     }
