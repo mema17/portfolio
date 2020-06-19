@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TopBar from './components/header/Header'
+import TopBar from './components/Header'
 import Intro from './components/Intro'
 import Contact from './components/contact/Contact'
 import FooterBar from './components/Footer'

@@ -24,30 +24,41 @@ export const Hashtag = styled.span`
     font-size: 1.2rem;
     font-weight: 500;
 `;
-export const ButtonLink = styled.a`
-padding: 1.5rem 3rem;
-border-radius: 0.3rem;
-box-shadow: 0 0.8rem 3rem -0.6rem rgba(0, 0, 0, 0.3);
-background-color: ${colors.WHITE};
-text-decoration: none;
-text-align: center;
-color: ${colors.AZURE};
-&:focus {
-    outline: 0.1rem dashed ${colors.WHITE};
-    outline-offset: 0.2rem;
-}
 
+export const ButtonLink = styled.a`
+    padding: 1.5rem 3rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.8rem 3rem -0.6rem rgba(0, 0, 0, 0.3);
+    background-color: ${colors.WHITE};
+    
+    text-decoration: none;
+    text-align: center;
+    color: ${colors.AZURE};
+
+    &:focus {
+        outline: 0.1rem dashed ${colors.WHITE};
+        outline-offset: 0.2rem;
+    }
 `;
+
 export const ButtonLinkModal = styled(ButtonLink)`
-display: block;    
-margin: 3rem auto 1rem;
-width: 40%;
+    display: block;    
+    margin: 3rem auto 1rem;
+    width: 40%;
     padding: 1 3rem;
-    color: ${colors.PINK};
     border: 0.3rem solid ${colors.PINK};
+    
+    color: ${colors.PINK};
+    
     &:focus {
         outline-color: ${colors.PINK};
     }
 `;
+
 export const LinkIcon = styled.a`
+
+&:focus {
+    outline: 0.1rem dashed ${colors.DEEPBLUE};
+    outline-offset: 0.2rem;
+}
 `;

@@ -1,13 +1,3 @@
-//colors
-$azure: #03CCF7;
-$blue: #1670f7;
-$pink: #F60C86;
-$dark-gray : #3B3838;
-$white : #fff;
-$black : #000;
-$primary-color: $azure;
-$secondary-color: $pink;
-
 //breakpoints
 $mobile-s: 320px;
 $mobile-m: 375px;
@@ -57,36 +47,8 @@ span {
     line-height: 2rem;
 }
 
-
-button,
-a,
-[class^="btn"] {
-    &:focus {
-        outline: 0.1rem dashed $white;
-        outline-offset: 0.2rem;
-    }
-}
-
-/* others */
-.hidden,
-[hidden] {
-    display: none;
-}
-.clearfix:after {
-    content: '';
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
-}
 /* responsive */
-@media screen and (min-width : $mobile-l) {
-    .header {
-        .logo {
-            max-width: 20rem;
-        }
-    }
-}
+
 
 @media screen and (min-width : $tablet) {
 
