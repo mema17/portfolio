@@ -12,6 +12,7 @@ export const SrOnly = styled.div`
         width: 1px;
     }
 `;
+
 export const Hashtag = styled.span`
     display: inline-block;
     margin: 0.5rem 0.5rem 0 0;
@@ -56,9 +57,18 @@ export const ButtonLinkModal = styled(ButtonLink)`
 `;
 
 export const LinkIcon = styled.a`
-
-&:focus {
-    outline: 0.1rem dashed ${colors.DEEPBLUE};
-    outline-offset: 0.2rem;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+    text-decoration: none;
+    color: ${colors.DEEPBLUE};
+    & :focus {
+        outline: 0.1rem dashed ${colors.DEEPBLUE};
+        outline-offset: 0.2rem;
+    }
+    &  > span{
+        font-size: 1.4rem;
+        margin-top: 0.6rem;
+    }
 `;

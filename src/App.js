@@ -2,7 +2,7 @@ import React from 'react';
 
 import TopBar from './components/Header'
 import Intro from './components/Intro'
-import Contact from './components/contact/Contact'
+import Contact from './components/Contact'
 import FooterBar from './components/Footer'
 import AboutMe from './components/AboutMe'
 

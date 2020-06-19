@@ -2,9 +2,8 @@ import React from 'react';
 import { Send, Linkedin, Github } from 'grommet-icons';
 import styled from 'styled-components';
 
-import colors from '../styles/colors';
 import screenSize from '../styles/screenSizes';
-
+import { LinkIcon } from '../styles/lib';
 const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
@@ -30,24 +29,6 @@ const StyledButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
     text-decoration: none;
-
-    & > a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 1rem;
-        text-decoration: none;
-        color: ${colors.DEEPBLUE};
-    }
-    & > a:focus {
-        outline: 0.1rem dashed ${colors.DEEPBLUE};
-        outline-offset: 0.2rem;
-    }
-    & > a > span{
-        font-size: 1.4rem;
-        margin-top: 0.6rem;
-    }
-
 `;
 
 const links = [
@@ -76,13 +57,13 @@ const links = [
 const renderLinks = (links) => {
     return (links.map((link, index) => {
         return (
-            <a
+            <LinkIcon
                 key={index}
                 href={link.href}
                 rel="noopener noreferrer">
                 {link.icon}
                 <span>{link.label}</span>
-            </a>
+            </LinkIcon>
         )
     }))
 }

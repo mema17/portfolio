@@ -1,8 +1,30 @@
 import React from 'react'
-import { Anchor, Box, Heading } from 'grommet'
 import { Linkedin, Send } from 'grommet-icons'
 
-import './contact.scss'
+import styled from 'styled-components';
+import {LinkIcon} from '../styles/lib';
+import colors from '../styles/colors';
+
+const StyledContact = styled.section`
+    box-sizing: border-box;
+	width: 100%;
+	background-color: ${colors.WHITE};
+	padding: 10rem 1rem;
+	margin: 0;
+    text-align: center;
+    &>h2{
+        font-size: 2rem;
+		margin-bottom: 3rem;
+		color: ${colors.DEEPBLUE};
+		max-width:100%;
+    }
+    & > div{
+        display: flex;
+		justify-content: center;
+		text-decoration: none;
+    }
+`;
+
 const links = [
     {
         href: "&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#101;&#108;&#97;&#110;&#105;&#101;&#46;&#109;&#97;&#116;&#104;&#101;&#121;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;",
@@ -22,26 +44,26 @@ const links = [
 const renderLinks = (links) => {
     return (links.map((link, index) => {
         return (
-            <a
+            <LinkIcon
             key={index}
                 href={link.href}
                 rel="noopener noreferrer">
                 {link.icon}
-                <span color="accent-1" className="button-link-text">
+                <span>
                     {link.label}
                 </span>
-            </a>
+            </LinkIcon>
         )
     }))
 }
 
 export default function Contact() {
     return (
-        <Box className="contact">
-            <Heading level="2">Let's have a chat and discuss your project together</Heading>
-            <Box className="button-wrapper" direction="row">
+        <StyledContact>
+            <h2>Let's have a chat and discuss your project together</h2>
+            <div>
                 {renderLinks(links)}
-            </Box>
-        </Box>
+            </div>
+        </StyledContact>
     )
 }
