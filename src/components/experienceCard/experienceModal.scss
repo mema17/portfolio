@@ -1,0 +1,111 @@
+// /* needed for old browsers */
+// dialog {
+//     display: block;
+// }
+
+// /* removes scroll when modal is opened */
+// .project-details-no-scroll {
+//     overflow: hidden;
+// }
+
+// /* overlay covers everything */
+// .project-details-modal-overlay {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     left: 0;
+//     background: #000;
+//     opacity: 0.8;
+//     z-index: 500;
+// }
+
+/* modal */
+$pink: #F60C86;
+$dark-gray : #3B3838;
+$white : #fff;
+.project-details-modal {
+    box-sizing: border-box;
+    // position: fixed;
+    // left: 0rem;
+    // top: 5rem;
+    // bottom: 5rem;
+    // z-index: 501;
+    // width: 80%;
+    // margin: 0 auto;
+    padding: 1rem 1.5em 5rem;
+    border: none;
+    border-radius: 0.3rem;
+    background: $white;
+    height: calc(100vh - 15rem);
+    overflow-y: scroll;
+
+    h1 {
+        font-family: "roboto-bold";
+        text-transform: uppercase;
+        color: $pink;
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .card_job {
+        display: block;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .card_desc_hashtags {
+        margin-bottom: 3rem;
+    }
+
+    .card__desc_img {
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 3rem;
+        max-height: 30rem;
+        object-fit: contain;
+    }
+
+    .btn-pink {
+        display: block;    
+        padding: 1 3rem;
+        border-radius: 0.3rem;
+        box-shadow: 0 0.8rem 3rem -0.6rem rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        text-align: center;
+        width: 40%;
+        margin: 3rem auto 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background-color: $white;
+        color: $pink;
+        border: 0.3rem solid $pink;
+    
+        &:focus {
+            outline-color: $pink;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &-close {
+        position: sticky;
+        top: -1rem;
+        margin-left: 100%;
+        margin-top: -1rem;
+        padding: 0;
+        border: none;
+        background-color: white;
+        color: #000;
+        font-size: 3rem;
+
+        &:focus {
+            outline-color: $dark-gray;
+
+        }
+
+    }
+}

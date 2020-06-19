@@ -1,0 +1,177 @@
+//colors
+$azure: #03CCF7;
+$blue: #1670f7;
+$pink: #F60C86;
+$dark-gray : #3B3838;
+$white : #fff;
+$black : #000;
+$primary-color: $azure;
+$secondary-color: $pink;
+
+//breakpoints
+$mobile-s: 320px;
+$mobile-m: 375px;
+$mobile-l: 425px;
+$tablet: 768px;
+$laptop-m: 1024px;
+$laptop-l: 1440px;
+$laptop-xl: 2560px;
+
+
+/* fonts */
+@font-face {
+    font-family: "roboto-regular";
+    src: url(./fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "roboto-bold";
+    src: url(./fonts/Roboto-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: "libreBaskerville-regular";
+    src: url(./fonts/LibreBaskerville-Regular.ttf) format('truetype');
+}
+
+/* typography */
+html {
+    font-family: "roboto-regular";
+    font-size: 62.5%;
+}
+body{
+    margin: 0;
+}
+.app{
+    background-image: linear-gradient(to top right, #1670f7, #11cbd7 72%);
+    background-attachment: fixed;
+    .grommet{
+        background-color: transparent;
+    }
+}
+p {
+    line-height: 2.5rem;
+}
+
+span {
+    line-height: 2rem;
+}
+
+h1 {
+    font-family: "libreBaskerville-regular";
+    font-weight: normal;
+    font-size: 4rem;
+
+}
+
+/* buttons designs */
+[class^="btn"] {
+    padding: 1.5rem 3rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.8rem 3rem -0.6rem rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    text-align: center;
+}
+
+button,
+a,
+[class^="btn"] {
+    &:focus {
+        outline: 0.1rem dashed $white;
+        outline-offset: 0.2rem;
+    }
+}
+
+.btn-white {
+    background-color: $white;
+    color: $primary-color;
+}
+
+.btn-pink {
+    background-color: $white;
+    color: $pink;
+    border: 0.3rem solid $pink;
+
+    &:focus {
+        outline-color: $pink;
+    }
+}
+
+/* others */
+.hidden,
+[hidden] {
+    display: none;
+}
+
+.sr-only {
+    position: absolute !important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    &::before,
+    &::after {
+        display: none;
+    }
+
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+/* responsive */
+@media screen and (min-width : $mobile-l) {
+    .header {
+        .logo {
+            max-width: 20rem;
+        }
+    }
+
+    .intro {
+
+        .button-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .btn-white {
+                width: 12rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width : $tablet) {
+    .intro {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 46rem;
+
+        h1::after {
+            left: calc(50% - 2rem);
+        }
+    }
+
+    .about-me {
+        columns: 30rem 4;
+    }
+
+    .project-details-modal {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width : $laptop-m) {
+    .project-details-modal {
+        width: 50%;
+    }
+}
