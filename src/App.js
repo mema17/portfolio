@@ -8,7 +8,7 @@ import AboutMe from './components/AboutMe'
 
 import { Grommet, Main } from 'grommet';
 import THEME from './styles/theme';
-import './styles/app.scss'
+import './styles/app.css'
 
 function App() {
 	return (

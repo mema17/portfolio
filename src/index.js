@@ -2,26 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-//redux
-import experienceSelector from './reducers/ExperienceSelector'
-import { createStore } from 'redux'
-import { Provider } from 'react-redux'
-
-
 //fonts
 import './styles/fonts/Roboto-Regular.ttf'
 import './styles/fonts/Roboto-Bold.ttf'
 import './styles/fonts/LibreBaskerville-Regular.ttf'
 
 // import * as serviceWorker from './serviceWorker';
-const store = createStore(experienceSelector,
-	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Provider store={store}>
 			<App />
-		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );

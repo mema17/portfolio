@@ -23,29 +23,6 @@ const THEME = deepMerge(grommet, {
             family: 'Roboto-regular',
             size: '1.6rem'
         },
-    },
-    // button: {
-    //     border: {
-    //         radius: '0.3rem',
-    //         color: WHITE,
-    //     },
-    //     padding: {
-    //         vertical: '1.5rem',
-    //         horizontal: '3rem',
-    //     },
-    //     color: AZURE,
-    //     extend: props => `
-    //                 background-color:${WHITE};
-    //                 font-weight: normal;
-    //                 box-shadow: 0 0.8rem 3rem -0.6rem rgba(0, 0, 0, 0.3);
-    //                 text-decoration: none;
-    //                 :focus{
-    //                     outline: 0.1rem dashed ${WHITE};
-    //                     outline-offset: 0.2rem;
-    //                     border: 0.1rem solid ${WHITE};
-    //                 }
-    //                 `
-
-    // },
+    }
 })
 export default THEME;

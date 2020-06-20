@@ -30,6 +30,7 @@ export default function AboutMe() {
         <StyledAboutMe>
             <SrOnly>
                 <h2>About me, some of my projects</h2>
+                <img src={process.env.PUBLIC_URL + "/assets/images/share-img.jpg"} alt=""></img>
             </SrOnly>
             <AboutCard />
             {experiences}

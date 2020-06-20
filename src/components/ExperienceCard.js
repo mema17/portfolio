@@ -113,11 +113,16 @@ const listLanguages = (languages) => {
     return (languages.map((language, index) => {
         return (
             <Hashtag task key={index}>{language}</Hashtag>
-
         )
     }))
 }
-
+const cleanFullDesc = (fulldesc) => {
+    return (fulldesc.map((paragraph, index) => {
+        return (
+            <p key={index}>{paragraph}</p>
+        )
+    }))
+}
 export default function ExperienceCard({ data }) {
     const [show, setShow] = React.useState();
     return (
@@ -148,7 +153,7 @@ export default function ExperienceCard({ data }) {
                         {listLanguages(data.languages)}
                     </div>
                     <Image src={process.env.PUBLIC_URL + "/assets/images/" + data.fullImgPath} alt="" />
-                    <p>{data.fullDesc}</p>
+                    <p>{cleanFullDesc(data.fullDesc)}</p>
 
                     <ButtonLinkModal
                         href={data.link.address}

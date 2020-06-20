@@ -44,7 +44,7 @@ export const ButtonLink = styled.a`
 
 export const ButtonLinkModal = styled(ButtonLink)`
     display: block;    
-    margin: 3rem auto 1rem;
+    margin: 2rem auto 1rem;
     width: 40%;
     padding: 1 3rem;
     border: 0.3rem solid ${colors.PINK};
