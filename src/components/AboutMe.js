@@ -2,7 +2,7 @@ import React from 'react'
 
 import WORK_EXPERIENCE from '../data/workExperienceData';
 import AboutCard from './AboutCard';
-import ExperienceCard from './experienceCard/ExperienceCard'
+import ExperienceCard from './ExperienceCard'
 
 import styled from 'styled-components'
 import {SrOnly} from '../styles/lib'

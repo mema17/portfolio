@@ -63,7 +63,7 @@ export const LinkIcon = styled.a`
     margin: 0 1rem;
     text-decoration: none;
     color: ${colors.DEEPBLUE};
-    & :focus {
+    &:focus {
         outline: 0.1rem dashed ${colors.DEEPBLUE};
         outline-offset: 0.2rem;
     }

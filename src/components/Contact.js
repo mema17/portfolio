@@ -25,6 +25,9 @@ const StyledContact = styled.section`
 		justify-content: center;
 		text-decoration: none;
     }
+    & > div a {
+        margin: 0 2rem;
+    }
 `;
 
 const links = [
@@ -32,14 +35,16 @@ const links = [
         href: "&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#101;&#108;&#97;&#110;&#105;&#101;&#46;&#109;&#97;&#116;&#104;&#101;&#121;&#64;&#111;&#117;&#116;&#108;&#111;&#111;&#107;&#46;&#99;&#111;&#109;",
         icon: <Send
             color="accent-1"
-            className="button-icon" />,
+            className="button-icon" 
+            size="large"/>,
         label: "Email"
     },
     {
         href: "https://fr.linkedin.com/in/m%C3%A9lanie-mathey-056111133",
         icon: <Linkedin
             color="accent-1"
-            className="button-icon" />,
+            className="button-icon" 
+            size="large"/>,
         label: "Linkedin"
     }
 ]

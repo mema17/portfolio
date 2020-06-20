@@ -1,20 +1,27 @@
 import React from 'react'
-import { Button, Heading, Layer, Text, Image } from 'grommet'
+
+import { Button, Layer, Image } from 'grommet'
 import { Close } from 'grommet-icons'
 
-
-import './experienceModal.scss'
-import { Hashtag, ButtonLinkModal } from './../../styles/lib'
-
 import styled from 'styled-components'
-import colors from './../../styles/colors'
+import { Hashtag, ButtonLinkModal } from '../styles/lib'
+import colors from '../styles/colors'
+import screenSize from '../styles/screenSizes'
 
-const StyledThumbnail = styled.div`
+const StyledExperience = styled.a`
     display: inline-block;
     position: relative;
-    clear: both;
-    
     margin: 2rem 0;
+    clear: both;
+    text-decoration: none;
+    
+    &:focus {
+        outline: 0.1rem dashed ${colors.WHITE};
+        outline-offset: 0.2rem;
+    }
+`;
+const StyledThumbnail = styled.div`
+
     width: calc(100%- 4rem);
     padding: 1.5rem 2rem;
     
@@ -23,7 +30,7 @@ const StyledThumbnail = styled.div`
     box-shadow: 0 0.8rem 3rem -0.6rem rgba(0, 0, 0, 0.3);
     
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.4rem;    
     
     &>img{
         display: block;
@@ -51,6 +58,49 @@ const StyledThumbnail = styled.div`
     }
 
 `;
+const StyledLayer = styled(Layer)`
+    box-sizing: border-box;
+    padding: 1rem 1.5em 5rem;
+    border: none;
+    border-radius: 0.3rem;
+    background: ${colors.WHITE};
+    height: calc(100vh - 15rem);
+    overflow-y: scroll;
+
+    & h1{
+        font-family: "roboto-bold";
+        text-transform: uppercase;
+        color: ${colors.PINK};
+        font-size: 1.6rem;
+        text-align: center;
+        margin: 0;
+    }
+    & h2{
+        display: block;
+        text-align: center;
+        margin: 0 0 2rem;
+        font-size: 1.6rem;
+        font-weight: normal;
+    }
+    & h2 + div {
+        margin-bottom: 3rem;
+    }
+    & img{
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 1rem;
+            max-height: 30rem;
+            object-fit: contain;
+
+    }
+
+    @media screen and ${screenSize.tablet}{
+        width: 65%;
+    }
+    @media screen and ${screenSize.mobileM}{
+       width: 50%;
+    }
+`;
 
 const listJobs = (jobs) => {
     return (jobs.map((job, index) => {
@@ -71,12 +121,9 @@ const listLanguages = (languages) => {
 export default function ExperienceCard({ data }) {
     const [show, setShow] = React.useState();
     return (
-        // work experience card
-        <div
-            >
+        <StyledExperience href="#">
             <StyledThumbnail onClick={() => setShow(true)}>
-                <img src={process.env.PUBLIC_URL + "/assets/images/" + data.thumbnailPath} 
-                alt=""  />
+                <img src={process.env.PUBLIC_URL + "/assets/images/" + data.thumbnailPath} alt="" />
                 <h3>{data.name}</h3>
                 <p>{data.shortDesc}</p>
                 <div>
@@ -88,21 +135,21 @@ export default function ExperienceCard({ data }) {
 
             {show && (
                 // work experience details modal
-                <Layer
+                <StyledLayer
                     onEsc={() => setShow(false)}
                     onClickOutside={() => setShow(false)}
                     animation="fadeIn"
-                    className="project-details-modal"
                 >
                     <Button icon={<Close />} a11yTitle="close modal" onClick={() => setShow(false)} />
-                    <Heading level="1">{data.name}</Heading>
-                    <Heading level="2">{data.shortDesc}</Heading>
-                    <div className="card_desc_hashtags">
+                    <h1>{data.name}</h1>
+                    <h2>{data.shortDesc}</h2>
+                    <div>
                         {listJobs(data.jobs)}
                         {listLanguages(data.languages)}
                     </div>
-                    <Image className="card__desc_img" src={process.env.PUBLIC_URL + "/assets/images/" + data.fullImgPath} alt=""></Image>
-                    <p className="card__desc--text">{data.fullDesc}</p>
+                    <Image src={process.env.PUBLIC_URL + "/assets/images/" + data.fullImgPath} alt="" />
+                    <p>{data.fullDesc}</p>
+
                     <ButtonLinkModal
                         href={data.link.address}
                         target="_blank"
@@ -110,8 +157,8 @@ export default function ExperienceCard({ data }) {
                     >
                         {data.link.name}
                     </ButtonLinkModal>
-                </Layer>
+                </StyledLayer>
             )}
-        </div>
+        </StyledExperience>
     )
 }
