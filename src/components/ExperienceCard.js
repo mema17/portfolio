@@ -55,20 +55,45 @@ const StyledThumbnail = styled.div`
 `;
 const StyledLayer = styled(Layer)`
     box-sizing: border-box;
-    padding: 1rem 1.5em 5rem;
+    padding: 0 1.5em 5rem;
     border: none;
     border-radius: 0.3rem;
     background: ${colors.WHITE};
-    height: calc(100vh - 15rem);
+    height: 100%;
+    //height: calc(100vh - 15rem);
     overflow-y: scroll;
 
+    & .modal-close {
+        position: sticky;
+        top: 0;
+        clear: both;
+        margin-left: calc(100% - 4rem);
+        border-radius: 50%;
+    }
+    & .modal-close:focus svg{
+        outline: 0.1rem dashed ${colors.DARKGRAY};
+        outline-offset: 0.2rem;
+    }
+    & .modal-close svg{
+        border-radius: 50%;
+        background-color: ${colors.LIGHTGRAY};
+        border: 0.3rem solid ${colors.WHITE};
+        padding: 1rem;
+    }
+    & img{
+        width: calc(100% + 5rem);
+        margin-left: -2.5rem;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+        max-height: 30rem;
+        object-fit: contain;
+    }
     & h1{
-        font-family: "roboto-bold";
-        text-transform: uppercase;
-        color: ${colors.PINK};
-        font-size: 1.6rem;
+        margin: 2rem 0 1rem;
         text-align: center;
-        margin: 0;
+        color: ${colors.AZURE};
+        font-family: "roboto-black";
+        font-size: 2.5rem;
     }
     & h2{
         display: block;
@@ -80,20 +105,10 @@ const StyledLayer = styled(Layer)`
     & h2 + div {
         margin-bottom: 3rem;
     }
-    & img{
-            box-sizing: border-box;
-            width: 100%;
-            margin-bottom: 1rem;
-            max-height: 30rem;
-            object-fit: contain;
-
-    }
 
     @media screen and ${screenSize.tablet}{
+        margin-top: 4rem;
         width: 65%;
-    }
-    @media screen and ${screenSize.mobileM}{
-       width: 50%;
     }
 `;
 
@@ -145,14 +160,19 @@ export default function ExperienceCard({ data }) {
                     onClickOutside={() => setShow(false)}
                     animation="fadeIn"
                 >
-                    <Button icon={<Close />} a11yTitle="close modal" onClick={() => setShow(false)} />
+                    <Button 
+                    className="modal-close" 
+                    icon={<Close size="small"/>} 
+                    a11yTitle="close modal" 
+                    focusIndicator="false"
+                    onClick={() => setShow(false)} />
+                    <Image src={process.env.PUBLIC_URL + "/assets/images/" + data.fullImgPath} alt="" />
                     <h1>{data.name}</h1>
                     <h2>{data.shortDesc}</h2>
                     <div>
                         {listJobs(data.jobs)}
                         {listLanguages(data.languages)}
                     </div>
-                    <Image src={process.env.PUBLIC_URL + "/assets/images/" + data.fullImgPath} alt="" />
                     <p>{cleanFullDesc(data.fullDesc)}</p>
 
                     <ButtonLinkModal

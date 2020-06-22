@@ -1,6 +1,5 @@
 import React from 'react'
 import { Box, Avatar } from 'grommet'
-import { StatusInfoSmall } from 'grommet-icons'
 
 import styled from 'styled-components'
 import colors from '../styles/colors'

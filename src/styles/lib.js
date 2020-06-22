@@ -33,8 +33,7 @@ export const ButtonLink = styled.a`
     text-decoration: none;
     text-align: center;
     color: ${colors.DEEPBLUE};
-    font-weight: bold;
-    
+
     &:focus {
         outline: 0.1rem dashed ${colors.WHITE};
         outline-offset: 0.2rem;
@@ -46,12 +45,12 @@ export const ButtonLinkModal = styled(ButtonLink)`
     margin: 2rem auto 1rem;
     width: 40%;
     padding: 1 3rem;
-    border: 0.3rem solid ${colors.PINK};
+    border: 0.3rem solid ${colors.AZURE};
     
-    color: ${colors.PINK};
+    color: ${colors.AZURE};
     
     &:focus {
-        outline-color: ${colors.PINK};
+        outline-color: ${colors.AZURE};
     }
 `;
 
