@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/portfolio-react/static/css/main.2987be10.chunk.css",
-    "main.js": "/portfolio-react/static/js/main.bcdb73dd.chunk.js",
-    "main.js.map": "/portfolio-react/static/js/main.bcdb73dd.chunk.js.map",
+    "main.css": "/portfolio-react/static/css/main.7b3c3583.chunk.css",
+    "main.js": "/portfolio-react/static/js/main.9a41b95f.chunk.js",
+    "main.js.map": "/portfolio-react/static/js/main.9a41b95f.chunk.js.map",
     "runtime-main.js": "/portfolio-react/static/js/runtime-main.a4de92d3.js",
     "runtime-main.js.map": "/portfolio-react/static/js/runtime-main.a4de92d3.js.map",
-    "static/js/2.e8b4e091.chunk.js": "/portfolio-react/static/js/2.e8b4e091.chunk.js",
-    "static/js/2.e8b4e091.chunk.js.map": "/portfolio-react/static/js/2.e8b4e091.chunk.js.map",
+    "static/js/2.3dc2e277.chunk.js": "/portfolio-react/static/js/2.3dc2e277.chunk.js",
+    "static/js/2.3dc2e277.chunk.js.map": "/portfolio-react/static/js/2.3dc2e277.chunk.js.map",
     "index.html": "/portfolio-react/index.html",
-    "precache-manifest.8ce08aea6b922c97cc04a9f4aa809053.js": "/portfolio-react/precache-manifest.8ce08aea6b922c97cc04a9f4aa809053.js",
+    "precache-manifest.bab0f5ff0e2ed6879ac5c3a5bcf401e8.js": "/portfolio-react/precache-manifest.bab0f5ff0e2ed6879ac5c3a5bcf401e8.js",
     "service-worker.js": "/portfolio-react/service-worker.js",
-    "static/css/main.2987be10.chunk.css.map": "/portfolio-react/static/css/main.2987be10.chunk.css.map",
-    "static/js/2.e8b4e091.chunk.js.LICENSE.txt": "/portfolio-react/static/js/2.e8b4e091.chunk.js.LICENSE.txt",
-    "static/media/LibreBaskerville-Regular.ttf": "/portfolio-react/static/media/LibreBaskerville-Regular.228126bc.ttf",
+    "static/css/main.7b3c3583.chunk.css.map": "/portfolio-react/static/css/main.7b3c3583.chunk.css.map",
+    "static/js/2.3dc2e277.chunk.js.LICENSE.txt": "/portfolio-react/static/js/2.3dc2e277.chunk.js.LICENSE.txt",
+    "static/media/app.css": "/portfolio-react/static/media/Roboto-Black.5ebb24ee.ttf",
     "static/media/Roboto-Bold.ttf": "/portfolio-react/static/media/Roboto-Bold.e07df86c.ttf",
     "static/media/Roboto-Regular.ttf": "/portfolio-react/static/media/Roboto-Regular.11eabca2.ttf",
+    "static/media/Thinking_of_Betty.ttf": "/portfolio-react/static/media/Thinking_of_Betty.f8170476.ttf",
     "static/media/resume-melanie-mathey-english.jpg": "/portfolio-react/static/media/resume-melanie-mathey-english.0d8d6acd.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a4de92d3.js",
-    "static/js/2.e8b4e091.chunk.js",
-    "static/css/main.2987be10.chunk.css",
-    "static/js/main.bcdb73dd.chunk.js"
+    "static/js/2.3dc2e277.chunk.js",
+    "static/css/main.7b3c3583.chunk.css",
+    "static/js/main.9a41b95f.chunk.js"
   ]
 }
