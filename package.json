@@ -1,8 +1,8 @@
 {
-  "name": "portfolio-react",
-  "version": "0.1.0",
+  "name": "portfolio",
+  "version": "2.0.0",
   "private": true,
-  "homepage": "https://mema17.github.io/portfolio-react",
+  "homepage": "https://mema17.github.io/portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
