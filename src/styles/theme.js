@@ -2,26 +2,22 @@
 import { deepMerge } from 'grommet/utils'
 import { grommet } from 'grommet/themes'
 
-const AZURE = "#03ccf7";
-const PINK = "#F60C86";
-const DEEPBLUE = "#1670f7";
-const DARKGRAY = "#3B3838";
-const WHITE = "#fff";
-const BLACK = "#000";
+import colors from './colors'
 
 const THEME = deepMerge(grommet, {
     global: {
         colors: {
-            'brand': AZURE,
-            'accent-1': DEEPBLUE,
-            'accent-2': PINK,
-            'text': DARKGRAY,
-            'white': WHITE,
-            'black': BLACK,
+            'brand': colors.AZURE,
+            'accent-1': colors.DEEPBLUE,
+            'accent-2': colors.PINK,
+            'text': colors.DARKGRAY,
+            'white': colors.WHITE,
+            'black': colors.BLACK,
         },
         font: {
             family: 'Roboto-regular',
-            size: '1.6rem'
+            size: '1.6rem',
+            color: colors.DARKGRAY
         },
     }
 })

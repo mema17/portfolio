@@ -5,7 +5,7 @@ import App from './App';
 //fonts
 import './styles/fonts/Roboto-Regular.ttf'
 import './styles/fonts/Roboto-Bold.ttf'
-import './styles/fonts/LibreBaskerville-Regular.ttf'
+import './styles/fonts/Thinking_of_Betty.ttf'
 
 // import * as serviceWorker from './serviceWorker';
 

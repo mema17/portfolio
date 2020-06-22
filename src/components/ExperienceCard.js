@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button, Layer, Image } from 'grommet'
+import { Button, Layer, Image, Avatar, Box } from 'grommet'
 import { Close } from 'grommet-icons'
 
 import styled from 'styled-components'
@@ -25,34 +25,29 @@ const StyledThumbnail = styled.div`
     width: calc(100%- 4rem);
     padding: 1.5rem 2rem;
     
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     background-color: ${colors.WHITE};
-    box-shadow: 0 0.8rem 3rem -0.6rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0.9rem 1.4rem 5.2rem 0.3rem rgba(60,63,91,0.48);
     
     text-decoration: none;
     font-size: 1.4rem;    
+    color: ${colors.DARKGRAY};
     
-    &>img{
+    & > img{
         display: block;
         width: calc(100% + 4rem);
         margin-left: -2rem;
         margin-top: -1.5rem;
-        border-top-left-radius: 0.3rem;
-        border-top-right-radius: 0.3rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
     }
     
-    & > h3{
-        margin: 2rem 0 0;
-        text-transform: uppercase;
-        color: ${colors.PINK};
-        font-weight: 700;
-        font-size: 1.4rem;
+    & h3{
+        margin: 0;
+        font-size: 1.6rem;
+        font-family: 'roboto-black';
     }
-    
-    & > p{
-        color: ${colors.DARKGRAY};
-        margin :  0.5rem 0;
-    }
+
     & > div{
         margin-bottom : 1rem;
     }
@@ -129,8 +124,13 @@ export default function ExperienceCard({ data }) {
         <StyledExperience href="#">
             <StyledThumbnail onClick={() => setShow(true)}>
                 <img src={process.env.PUBLIC_URL + "/assets/images/" + data.thumbnailPath} alt="" />
-                <h3>{data.name}</h3>
-                <p>{data.shortDesc}</p>
+                <Box direction="row" gap="1.5rem" margin={{"vertical":"3rem"}}>
+                    <Avatar size="medium" src={process.env.PUBLIC_URL + "/assets/images/logos/" + data.logo} />
+                    <div>
+                        <h3>{data.name}</h3>
+                        <span>{data.shortDesc}</span>
+                    </div>
+                </Box>
                 <div>
                     {listJobs(data.jobs)}
                     {listLanguages(data.languages)}

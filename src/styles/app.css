@@ -8,12 +8,15 @@
     font-family: "roboto-bold";
     src: url(./fonts/Roboto-Bold.ttf) format('truetype');
 }
-
-@font-face {
-    font-family: "libreBaskerville-regular";
-    src: url(./fonts/LibreBaskerville-Regular.ttf) format('truetype');
+@font-face{
+    font-family: "thinking-of-betty";
+    src: url(./fonts//Thinking_of_Betty.ttf) format('truetype');
 }
 
+@font-face{
+    font-family: "roboto-black";
+    src: url(./fonts/Roboto-Black.ttf) format('truetype');
+}
 
 html {
     font-family: "roboto-regular";
@@ -32,7 +35,7 @@ span {
 }
 
 .app{
-    background-image: linear-gradient(to top right, #1670f7, #11cbd7 72%);
+    background-image: linear-gradient(to top right, #0966ee, #73ebff);
     background-attachment: fixed;
 }
 .app .grommet{

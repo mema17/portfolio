@@ -3,7 +3,9 @@ import { Send, Linkedin, Github } from 'grommet-icons';
 import styled from 'styled-components';
 
 import screenSize from '../styles/screenSizes';
+import colors from '../styles/colors';
 import { LinkIcon } from '../styles/lib';
+
 const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
@@ -11,7 +13,7 @@ const StyledHeader = styled.header`
     width: 100%;
     box-sizing: border-box;
     padding: 1.5rem 2rem;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: ${colors.WHITE};
     
     & > span{
         font-weight: 700;

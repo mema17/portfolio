@@ -5,32 +5,37 @@ import { StatusInfoSmall } from 'grommet-icons'
 import styled from 'styled-components'
 import colors from '../styles/colors'
 
-const StyledAboutCard = styled.div`
+const StyledAboutCard = styled(Box)`
     margin: 2rem 0;
-    padding:2rem;
+    padding: 3rem 0 2rem;
+    align-items: center;
+    border-radius: 1rem;
+    //background-image: linear-gradient(to top right, #edf0f0, #ffffff);
     background-color: ${colors.WHITE};
-    border-radius: 0.3rem;
-    box-shadow: 0 0.8rem 3rem -0.6rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0.9rem 1.4rem 5.2rem 0.3rem rgba(60,63,91,0.48);
+
     font-size: 1.4rem;
 
-    & > div >span{
-        margin-left: 1.5rem;
+    & > span{
+        margin-top: 2rem;
         align-self: center;
-        font-weight: 600;
+        text-align-center;
+        font-family: "roboto-black"
     }
 
     & ul{
         list-style-type: none;
-        padding-left: 1rem;
+        text-align: center;
+        padding: 0;
     }
 
     & ul li{
         line-height: 2rem;
     }
-
-    & ul li svg{
-        margin-right:2rem;
-    }
+`;
+const StyledAvatar = styled(Avatar)`
+    width: 14rem;
+    height:14rem;
 `;
 const facts = [
     "Cheerful personality",
@@ -44,7 +49,6 @@ const renderFacts = (facts) => {
     return (facts.map((fact, index) => {
         return (
             <li key={index}>
-                <StatusInfoSmall color={colors.AZURE} size="small" />
                 {fact}
             </li>
 
@@ -54,10 +58,8 @@ const renderFacts = (facts) => {
 export default function AboutCard() {
     return (
         <StyledAboutCard>
-            <Box direction="row">
-                <Avatar size="xlarge" src={process.env.PUBLIC_URL + "/assets/images/profile-picture.png"} />
-                <span id="character-desc-list">Some random facts:</span>
-            </Box>
+            <StyledAvatar src={process.env.PUBLIC_URL + "/assets/images/profile-picture.png"} />
+            <span id="character-desc-list">Some random facts:</span>
             <ul aria-labelledby="character-desc-list">
                 {renderFacts(facts)}
             </ul>

@@ -45,10 +45,10 @@ const StyledTitle = styled.h1`
     position: relative;
     margin-bottom: 5rem;
     color: ${colors.WHITE};
-    font-family: "libreBaskerville-regular";
+    font-family: "thinking-of-betty";
     font-weight: normal;
     font-size: 4rem;
-    line-height: 5rem;
+    line-height: 6rem;
 
     &:after {
         content: " ";
@@ -59,6 +59,7 @@ const StyledTitle = styled.h1`
         width: 4rem;
         height: 0.3rem;
         background-color: ${colors.WHITE};
+        border-radius: 1rem;
     }
     @media screen and ${screenSize.tablet}{
         &:after {

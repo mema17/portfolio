@@ -18,24 +18,23 @@ export const Hashtag = styled.span`
     margin: 0.5rem 0.5rem 0 0;
     padding: 0.3rem 1rem;
     
-    background-color: ${props => props.task ? colors.PINK : colors.AZURE};
-    border-radius: 0.3rem;
+    background-color: ${colors.LIGHTGRAY};
+    border-radius: 0.7rem;
     
-    color: ${colors.WHITE};
-    font-size: 1.2rem;
-    font-weight: 500;
+    color: ${colors.DARKGRAY};
 `;
 
 export const ButtonLink = styled.a`
     padding: 1.5rem 3rem;
-    border-radius: 0.3rem;
+    border-radius: 1rem;
     box-shadow: 0 0.8rem 3rem -0.6rem rgba(0, 0, 0, 0.3);
     background-color: ${colors.WHITE};
     
     text-decoration: none;
     text-align: center;
-    color: ${colors.AZURE};
-
+    color: ${colors.DEEPBLUE};
+    font-weight: bold;
+    
     &:focus {
         outline: 0.1rem dashed ${colors.WHITE};
         outline-offset: 0.2rem;
