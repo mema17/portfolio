@@ -6,7 +6,7 @@ const WORK_EXPERIENCE = [
             jobs: ["Full stack developement","UX design" ],
             languages: ["Python","Shell","Javascript"],
             logo:"aldebaran-logo.jpg",
-            thumbnailPath: "Pepper.jpg",
+            thumbnailPath: "aldebaran-robotics.jpg",
             fullImgPath: "pepper-details-1.jpg",
             fullDesc:["Pepper is a 1.20m (4ft) humanoid robot created by Aldebaran Robotics (now Softbank Robotics) for B2B purposes. I built a software allowing us to test if Pepper would still work in a B2C environment.",
             "I came up with a game based app: Pepper would randomly interact with anyone she encounters (employees, visitors, clients, children...) and record data relevant to our test during the game. Those data would then be stored in an excel spreadsheet and sent to the team for analysis on a weekly basis.",
