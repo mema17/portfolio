@@ -8,30 +8,31 @@ import { Hashtag, ButtonLinkModal } from '../styles/lib'
 import colors from '../styles/colors'
 import screenSize from '../styles/screenSizes'
 
-const StyledExperience = styled.a`
+const StyledExperience = styled(Box)`
     display: inline-block;
     position: relative;
     margin: 2rem 0;
     clear: both;
-    text-decoration: none;
-    
-    &:focus {
-        outline: 0.1rem dashed ${colors.WHITE};
-        outline-offset: 0.2rem;
-    }
 `;
-const StyledThumbnail = styled.div`
+const StyledThumbnail = styled.button`
 
     width: calc(100%- 4rem);
     padding: 1.5rem 2rem;
     
+    border: none;
     border-radius: 1rem;
     background-color: ${colors.WHITE};
     box-shadow: 0.9rem 1.4rem 5.2rem 0.3rem rgba(60,63,91,0.48);
     
+    text-align: left;
     text-decoration: none;
     font-size: 1.4rem;    
     color: ${colors.DARKGRAY};
+
+    &:focus {
+        outline: 0.1rem dashed ${colors.WHITE};
+        outline-offset: 0.2rem;
+    }
     
     & > img{
         display: block;
@@ -133,10 +134,11 @@ const cleanFullDesc = (fulldesc) => {
         )
     }))
 }
+
 export default function ExperienceCard({ data }) {
     const [show, setShow] = React.useState();
     return (
-        <StyledExperience href="#">
+        <StyledExperience>
             <StyledThumbnail onClick={() => setShow(true)}>
                 <img src={process.env.PUBLIC_URL + "/assets/images/" + data.thumbnailPath} alt="" />
                 <Box direction="row" gap="1.5rem" margin={{"vertical":"3rem"}}>
@@ -151,7 +153,6 @@ export default function ExperienceCard({ data }) {
                     {listLanguages(data.languages)}
                 </div>
             </StyledThumbnail>
-
 
             {show && (
                 // work experience details modal
