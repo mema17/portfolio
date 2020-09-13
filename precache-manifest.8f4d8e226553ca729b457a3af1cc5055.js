@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d25328ccd7630c4d9735133abefba89a",
+    "revision": "5af68a0ff42f0ea2b92ff007a453c67a",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "c58707a46eda8760c5e6",
+    "revision": "682551127ac147a7c59b",
     "url": "/portfolio/static/css/main.5c65809e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.517759f1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c58707a46eda8760c5e6",
-    "url": "/portfolio/static/js/main.f53208f4.chunk.js"
+    "revision": "682551127ac147a7c59b",
+    "url": "/portfolio/static/js/main.4fb983b3.chunk.js"
   },
   {
     "revision": "7a6cc99bd8f08f9fa6ec",
@@ -40,7 +40,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/Thinking_of_Betty.f8170476.ttf"
   },
   {
-    "revision": "0d8d6acda2847c58ada1559e75e92214",
-    "url": "/portfolio/static/media/resume-melanie-mathey-english.0d8d6acd.jpg"
+    "revision": "b3a3be4c809ee913133c31d958dd2704",
+    "url": "/portfolio/static/media/resume-melanie-mathey-english.b3a3be4c.jpg"
   }
 ]);
